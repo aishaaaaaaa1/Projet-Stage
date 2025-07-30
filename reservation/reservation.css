@@ -1,0 +1,100 @@
+/*-----------------------------------*\
+ * #RESERVATION CARDS & BUTTONS
+\*-----------------------------------*/
+
+:root {
+  --maximum-blue-green_10: hsla(185, 75%, 45%, 0.1);
+  --rich-black-fogra-29: #071739;
+  --gray-x-11-gray: hsl(0, 0%, 74%);
+  --oxford-blue_60: hsla(230, 41%, 14%, 0.6);
+  --bittersweet: #a68868;
+  --smoky-black: #071739;
+  --gainsboro: hsl(0, 0%, 88%);
+  --black_90: hsla(0, 0%, 0%, 0.9);
+  --cultured: #f8f9fa;
+  --salmon: #b89a7a;
+  --white: hsl(0, 0%, 100%);
+  --black: #071739;
+  --onyx: #a68868;
+}
+
+body { 
+    background: linear-gradient(135deg, var(--bittersweet) 0%, var(--salmon) 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container { 
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+}
+.card { 
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(7,23,57,0.10); 
+}
+.card-header { 
+    background: linear-gradient(45deg, var(--bittersweet), var(--salmon)); 
+    color: var(--white); 
+    border-radius: 15px 15px 0 0 !important; 
+    padding: 1.5rem; 
+}
+.btn-primary { 
+    background: linear-gradient(45deg, var(--bittersweet), var(--salmon)); 
+    border: none; 
+    border-radius: 25px; 
+    padding: 10px 30px; 
+    color: var(--white);
+}
+.btn-primary:hover { 
+    transform: translateY(-2px); 
+    box-shadow: 0 5px 15px rgba(7,23,57,0.15); 
+    background: var(--salmon);
+}
+.room-card { 
+    transition: transform 0.3s ease; 
+    margin-bottom: 1rem; 
+    border: 2px solid transparent;
+}
+.room-card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--bittersweet);
+}
+.alert { 
+    border-radius: 10px; 
+    border: none; 
+}
+.room-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.status-disponible {
+    background: #28a745;
+    color: var(--white);
+}
+.status-occupee {
+    background: #dc3545;
+    color: var(--white);
+}
+.room-info {
+    padding: 15px;
+}
+.price-tag {
+    background: linear-gradient(45deg, var(--bittersweet), var(--salmon));
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+} 

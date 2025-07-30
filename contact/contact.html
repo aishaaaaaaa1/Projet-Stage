@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contactez CampusOne</title>
+  
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
+  
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  
+  <section>
+    
+    <div class="section-header">
+      <div class="container">
+        <h2>Contactez CampusOne</h2>
+        <p>Vous avez des questions ou besoin d'aide ? Notre équipe est à votre écoute pour vous accompagner dans votre parcours universitaire.</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-home" aria-hidden="true"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Adresse</h4>
+              <p>CampusOne - Siège administratif,<br />123 Rue de l’Université,<br />Casablanca, Maroc</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Téléphone</h4>
+              <p>+212 5 22 123 456</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            
+            <div class="contact-info-content">
+              <h4>Email</h4>
+              <p>campusone11@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form action="" id="contact-form">
+            <h2>Envoyez-nous un message</h2>
+            <div class="input-box">
+              <input type="text" required name="fullname" />
+              <span>Nom complet</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="email" required name="email" />
+              <span>Email</span>
+            </div>
+            
+            <div class="input-box">
+              <textarea required name="message"></textarea>
+              <span>Votre message...</span>
+            </div>
+            
+            <div class="input-box">
+              <input type="submit" value="Envoyer" />
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Vérifier si Font Awesome est chargé
+    document.addEventListener('DOMContentLoaded', function() {
+      // Attendre un peu pour que Font Awesome se charge
+      setTimeout(function() {
+        const icons = document.querySelectorAll('.fas');
+        icons.forEach(function(icon) {
+          // Si l'icône n'est pas visible, utiliser des icônes alternatives
+          if (getComputedStyle(icon, ':before').content === 'none') {
+            const iconClass = icon.className;
+            if (iconClass.includes('fa-home')) {
+              icon.className = 'ri-home-line';
+            } else if (iconClass.includes('fa-phone')) {
+              icon.className = 'ri-phone-line';
+            } else if (iconClass.includes('fa-envelope')) {
+              icon.className = 'ri-mail-line';
+            }
+          }
+        });
+      }, 1000);
+    });
+  </script>
+  
+</body>
+</html>
