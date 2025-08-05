@@ -74,7 +74,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="container" style="text-align: center;">
             <h2 class="h2 section-title">Accès non autorisé</h2>
             <p style="font-size: 1.2em; margin: 20px 0;">Vous devez vous connecter pour accéder au restaurant.</p>
-            <a href="login.php" class="btn btn-primary" style="display: inline-flex;">Se connecter</a>
+            <a href="login/login.php" class="btn btn-primary" style="display: inline-flex;">Se connecter</a>
         </div>
     </body>
     </html>
@@ -379,7 +379,9 @@ if (!isset($_SESSION['user_id'])) {
                 <ion-icon name="location"></ion-icon>
 
                 <span class="footer-link-text">
-                  1 Rue de l'Université, 49000 Angers, France
+                 CampusOne - Siège administratif,
+123 Rue de l’Université,
+Casablanca, Maroc
                 </span>
               </address>
             </li>
@@ -388,12 +390,12 @@ if (!isset($_SESSION['user_id'])) {
               <a href="tel:+33241420000" class="footer-link">
                 <ion-icon name="call"></ion-icon>
 
-                <span class="footer-link-text">+33 2 41 42 00 00</span>
+                <span class="footer-link-text">+212 5 22 123 456</span>
               </a>
             </li>
 
             <li>
-              <a href="mailto:contact@campusone.fr" class="footer-link">
+              <a href="campusone11@gmail.com" class="footer-link">
                 <ion-icon name="mail"></ion-icon>
 
                 <span class="footer-link-text">contact@campusone.fr</span>
