@@ -158,16 +158,18 @@ if (!isset($_SESSION['user_id'])) {
   <div id="cartItemsContainer">
     <?php
     $panier = get_panier();
-    $produits = get_produits(array_keys($panier));
-    $total = 0;
     ?>
-    <?php if (empty($produits)): ?>
+    <?php if (empty($panier)): ?>
       <div class="empty-cart-message">
         <ion-icon name="lock-closed-outline"></ion-icon>
         <h3>Votre panier est vide</h3>
         <p>Ajoutez des produits pour commencer vos achats</p>
       </div>
     <?php else: ?>
+      <?php
+      $produits = get_produits(array_keys($panier));
+      $total = 0;
+      ?>
       <div class="cart-items-container">
         <?php foreach ($produits as $produit): 
           $qte = $panier[$produit['id']];
@@ -592,6 +594,8 @@ function addToCart(productId) {
   .then(data => {
     if (data.success) {
       updateCartUI(data.panier);
+      // Recharger la page pour mettre à jour l'affichage du panier
+      location.reload();
     }
   });
 }
